@@ -162,7 +162,7 @@ class Business extends Contact1 {
     }
 }
 
- class ADDRESS {
+class ADDRESS {
     public static void main(String[] args) {
         Person person = new Person("John Doe", "1234567890", "123 Main St");
         Business business = new Business("Acme Corp", "9876543210", "Software Solutions");
@@ -175,3 +175,104 @@ class Business extends Contact1 {
     }
 }
 
+//daimond problem
+interface Animal1 {
+    void speak();
+}
+
+class Dog implements Animal1 {
+    public void speak() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat implements Animal1 {
+    public void speak() {
+        System.out.println("Cat meows");
+    }
+}
+
+
+/*class DogCat implements Dog, Cat
+    public static void main(String[] args) {
+        DogCat dogCat = new DogCat();
+        dogCat.speak();
+    }
+
+    class DogCat implements Dog, Cat {
+        public void speak() {
+            System.out.println("DogCat meows and barks");
+        }
+
+        public static void main(String[] args) {
+            DogCat dogCat = new DogCat();
+            dogCat.speak();
+        }
+
+    }
+
+ */
+class A1
+{
+    public void display()
+    {
+        System.out.println("class A display() method called");
+    }
+}
+class B1 extends A1
+{
+
+    public void display()
+    {
+        System.out.println("class B display() method called");
+    }
+}
+class C extends A1
+{
+    public void display()
+    {
+        System.out.println("class C display() method called");
+    }
+}
+//not supported in Java
+ class D extends A1
+{
+    public static void main(String args[])
+    {
+        D d = new D();
+//creates ambiguity which display() method to call
+        d.display();
+    }
+}
+interface Animal11 {
+    void speak();
+}
+
+class Dog1 implements Animal11{
+    public void speak() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat1 implements Animal11 {
+    public void speak() {
+        System.out.println("Cat meows");
+    }
+//}
+
+//class Dog1Cat1  extends Dog1 implements Cat1 {
+   // public static void main(String[] args) {
+      //  Dog1Cat1 dogCat = new Dog1Cat1();
+      //  dogCat.speak();
+  //  }
+//}
+//class DogCat implements Dog, Cat {
+  //  public void speak() {
+    //    System.out.println("DogCat meows and barks");
+//    }
+
+   // public static void main(String[] args) {
+       // DogCat dogCat = new DogCat();
+    //    dogCat.speak();
+   // }
+}

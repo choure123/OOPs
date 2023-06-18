@@ -32,3 +32,23 @@ public class Encapsulation {
             //custom output of a class
         }
     }
+class a {
+    private int value; // data handing
+    public void setValue(int x){    //abstraction
+        value=x;
+
+    }
+    public int getValue(){
+        return value;
+
+    }
+
+}
+class B {
+    public static void main(String[] args) {
+        a r = new a();
+        r.setValue (100);
+        System.out.print(r.getValue());
+
+    }
+}
